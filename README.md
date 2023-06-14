@@ -1,7 +1,8 @@
 
 	Scopul Proiectului 
  
-Scopul proiectului este de a dezvolta un dispozitiv de antrenament myoelectric care să permită utilizatorului să controleze un servo motor cu ajutorul semnalelor electromiografice (EMG) generate de mușchii săi. Acest proiect se concentrează pe utilizarea tehnologiei EMG pentru a crea o interfață între sistemul muscular al utilizatorului și dispozitivul de antrenament.
+	Scopul proiectului este de a dezvolta un dispozitiv de antrenament myoelectric care să permită utilizatorului să controleze un servo motor cu ajutorul semnalelor electromiografice (EMG) generate de mușchii săi. 
+ 	Acest proiect se concentrează pe utilizarea tehnologiei EMG pentru a crea o interfață între sistemul muscular al utilizatorului și dispozitivul de antrenament.
 
 	Obiective 
  
@@ -23,7 +24,8 @@ Scopul proiectului este de a dezvolta un dispozitiv de antrenament myoelectric c
 
 	d. Monitorizarea și afișarea datelor relevante, cum ar fi semnalele EMG, poziția motorului servo și starea gripperului.
 	Interfață: 
-Integrarea unei interfețe utilizator-grafic (GUI) în LabVIEW pentru a facilita interacțiunea cu utilizatorul și controlul sistemului.
+
+	e. Integrarea unei interfețe utilizator-grafic (GUI) în LabVIEW pentru a facilita interacțiunea cu utilizatorul și controlul sistemului.
 
 Nivele de performanță: 
  
