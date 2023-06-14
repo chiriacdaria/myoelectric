@@ -52,12 +52,15 @@ Relaxat
 Incordat
 
 Semnal nefiltrat
+
 <img width="485" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/92724895-578d-4360-8e8b-565adc1db60e">
  
 Semnal filtrat
+
 <img width="485" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/d6f5d83b-caa5-48e2-92c3-3208ff7c4c4a">
 
 	Graficul semnalelor EMG filtrate si nefiltrate
+ 
  <img width="337" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/ebe34c21-e2f2-4571-9b64-0e2ff8663d8c">
 
 Acest grafic arată cum semnalele EMG sunt procesate și pregătite pentru a fi utilizate în sistemul de control.
@@ -67,6 +70,7 @@ Prin comparația celor două grafice, se poate observa cum filtrarea reduce zgom
 
 
 	Graficul semnalelor EMG si răspunsului motorului servo.
+ 
 <img width="317" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/7499bc02-fd33-41de-afd3-0443a72e4310">
 
 Graficul semnalului EMG filtrat și al răspunsului motorului servo (input-output) este esențial pentru a vizualiza relația dintre semnalul EMG și mișcarea motorului servo. 
@@ -74,6 +78,7 @@ Acesta arată cum semnalul EMG influențează răspunsul motorului servo și cum
  Graficul permite evaluarea eficacității controlului bazat pe semnalul EMG și poate evidenția corelații și tendințe importante.
 
 	Răspunsul treapta sistemului identificat
+ 
 <img width="316" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/fa43451f-d988-48a2-84e6-f69fc95f9c8d">
 
 Răspunsul treaptă al sistemului identificat este important în achiziția de date deoarece oferă informații despre comportamentul sistemului în timpul unei schimbări bruște în intrarea sa.
@@ -81,15 +86,18 @@ Răspunsul treaptă al sistemului identificat este important în achiziția de d
 Observam ca sistemul nu prezinta timp mort, se stabilizeaza la 1
 
 Sistemului identificat este de 0.0684 secunde. 
+
 <img width="314" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/faa76fba-4c5e-4993-85e1-00d23d1c4c18">
 
 Acesta indică faptul că sistemul va ajunge la aproximativ 68.4% din valoarea stabilă finală în acest interval de timp după aplicarea unei trepte în semnalul de intrare.
 
 	Diagrama Bode a sistemului identificat
+ 
 <img width="314" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/30abbec5-c4bd-49b1-b5ac-ef3fc217adf4">
 
 Aceasta arată cum sistemul se comportă la diferite frecvențe și evidențiază amplificarea și faza sistemului în funcție de frecvență.
 Phase margin=173
+
 <img width="230" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/24ae6a81-11e0-49b8-a718-3778c51bf6c2">
 
 	Graficul comparativ între răspunsul filtrat al sistemului și răspunsul motorului servo
@@ -105,6 +113,7 @@ Graficul compară semnalul real al motorului servo (reprezentat de obiectul serv
  Acesta evidențiază  prin suprapunerea celor doua semnale modul în care răspunsul sistemului identificat se apropie si se potrivește cu răspunsul real al servo motorului. 
 
 	Răspunsul sistemului în domeniul s
+ 
 <img width="333" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/6b90ffde-b009-42cd-8711-57112bbcd3f6">
 
 Graficul va afișa semnalul motorului servo real (linia albastră) și răspunsul sistemului identificat (linia roșie) pe aceeași figură.
@@ -120,6 +129,7 @@ Am ales utilizarea metodei ARX (Autoregressive with eXogenous inputs) pentru a i
 Filtrarea semnalului EMG:  Semnalul EMG este filtrat pentru a elimina zgomotul și a evidenția informațiile relevante. În cod, se aplică un filtru trece sus (high-pass filter)  și un filtru trece jos (low-pass filter) asupra semnalului EMG, rezultând semnalul filtrat.
 Crearea obiectului de date de intrare-ieșire:  Se crează un obiect de date (data) care conține semnalul filtrat al motorului servo (ieșire) și semnalul filtrat al semnalului EMG (intrare). Această structură de date este utilizată în procesul de identificare. (iddata)
 Identificarea modelului ARX:  Se utilizează funcția arx pentru a identifica modelul ARX. Prin specificarea ordinului polinomial AR și B, precum și ordinul de întârziere temporală (time delay), modelul ARX este ajustat pe baza datelor de intrare-ieșire furnizate. Rezultatul este un model ARX identificat.
+
 <img width="243" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/c8739063-6f63-471f-bf68-07e6a21e9408">
 
 	Proiectarea sistemului de control
@@ -175,6 +185,7 @@ Am generat trei grafice pentru a vizualiza răspunsul sistemului în diferite et
 
   
 	Graficul "Step Response of the Closed-loop System"
+ 
 <img width="288" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/d10acac7-c5d5-4ec7-a855-df151b59f127">
 
 Acest grafic reprezintă răspunsul sistemului în buclă închisă, adică răspunsul sistemului controlat cu ajutorul regulatorului proiectat.
@@ -183,6 +194,7 @@ Acest grafic oferă o imagine a modului în care sistemul atinge și se stabiliz
 Observam timpul de raspuns de 0.207, valoare foarte apropiata de valoarea impusa.
 
 	Graficul "Step Response of tf_H0":
+ 
 <img width="294" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/3398e2ad-7ca4-4ed8-92d4-9df2dc066231">
 
 Acest grafic reprezintă răspunsul funcției de transfer tf_H0, care este regulatorul continuu proiectat.
@@ -191,6 +203,7 @@ Este util pentru a evalua comportamentul și performanța regulatorului continuu
 Observam existenta suprareglajului.
 
 	Graficul "Step Response of the Discrete-time Controller"
+ 
 <img width="299" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/3b09fbb9-e940-478a-9df5-d728498f2f41">
 
 Acest grafic reprezintă răspunsul controlerului discret obținut prin transformarea regulatorului continuu într-un controler discret utilizând aproximarea ZOH. 
@@ -201,12 +214,14 @@ Este util pentru a evalua comportamentul și performanța controlerului discret 
 
  
 In aceasta imagine remarcam raspunsul servo motorului dupa aplicarea regulatorului calculat.
+
 <img width="339" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/b99296c2-00f2-408b-bcb9-d79b429c1a78">
 
 Observam o crestere rapida si o coborare lenta in functie de trashold care a fost setat la0.2. Un trashold mai mare va genera o coborare mai lenta. Ne dorim acest comportament pentru gripper-ul ce simuleaza o proteza.
 De asemenea, vedem ca raspunsul urmareste referinta deci sistemul proiectat satisfice conditiile impuse.
 
 Pentru implementarea aplicației de control a unui gripper utilizând regulatorul proiectat, s-a ales mediul de dezvoltare LabVIEW. LabVIEW este un mediu de programare grafic, utilizat în principal pentru dezvoltarea de aplicații de testare, măsurare și control.
+
  <img width="521" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/b41749c6-7d66-4984-ab90-059d7ccf1b5f">
 
 Regulatorul proiectat este integrat în aplicația LabVIEW pentru a controla gripperul. Acesta este implementat in structura de mai sus si  primește date de intrare (cum ar fi setările de control sau măsurătorile) de la muschi și generează semnale de control corespunzătoare pentru a controla deschiderea și închiderea gripperului.
