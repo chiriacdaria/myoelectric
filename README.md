@@ -55,11 +55,11 @@ Determinarea modelului matematic al sistemului
  
 Analiza sistemului  
 
- Marimea controlată (output) în acest caz este poziția gripperului. Scopul este de a controla și monitoriza poziția acestuia în timpul prinderii și eliberării obiectelor.
+	 Marimea controlată (output) în acest caz este poziția gripperului. Scopul este de a controla și monitoriza poziția acestuia în timpul prinderii și eliberării obiectelor.
  
-Marimea manipulată (input) este semnalul EMG (Electromiografie) generat de mușchii umani. Acest semnal este captat și procesat pentru a determina intenția utilizatorului de a controla gripperul. Semnalul EMG este utilizat ca sursă de informație pentru a comanda motorul servo și a controla deschiderea/cușca gripperului.
+	Marimea manipulată (input) este semnalul EMG (Electromiografie) generat de mușchii umani. Acest semnal este captat și procesat pentru a determina intenția utilizatorului de a controla gripperul. Semnalul EMG este utilizat ca sursă de informație pentru a comanda motorul servo și a controla deschiderea/cușca gripperului.
 
-Prin analiza sistemului, se poate investiga comportamentul și performanțele sistemului de control. Aceasta include evaluarea răspunsului sistemului la semnalele EMG și analiza performanțelor în ceea ce privește prinderea și eliberarea obiectelor.
+	Prin analiza sistemului, se poate investiga comportamentul și performanțele sistemului de control. Aceasta include evaluarea răspunsului sistemului la semnalele EMG și analiza performanțelor în ceea ce privește prinderea și eliberarea obiectelor.
 	Achizitie semnale
  
 <img width="257" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/e40d1ad2-9cb3-46dc-820d-00fc42f3d5b9">
