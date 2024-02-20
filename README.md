@@ -385,6 +385,7 @@ By analyzing the system, we can investigate the behavior and performance of the 
 
 ### Tensed
 Unfiltered Signal
+
 <img width="485" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/92724895-578d-4360-8e8b-565adc1db60e">
 
 ### Filtered Signal
