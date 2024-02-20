@@ -1,10 +1,10 @@
 
-Scopul Proiectului 
+## Scopul Proiectului 
  
 	Scopul proiectului este de a dezvolta un dispozitiv de antrenament myoelectric care să permită utilizatorului să controleze un servo motor cu ajutorul semnalelor electromiografice (EMG) generate de mușchii săi. 
  	Acest proiect se concentrează pe utilizarea tehnologiei EMG pentru a crea o interfață între sistemul muscular al utilizatorului și dispozitivul de antrenament.
 
-Obiective 
+## Obiective 
  
 	Studierea și înțelegerea principiilor de funcționare a motoarelor servo și a tehnologiei EMG (Electromiografie) pentru detectarea semnalelor electrice generate de mușchii umani.
 	Utilizarea plăcii Elvis pentru implementarea sistemului de control al motorului servo și a gripperului (dispozitivul de prindere și eliberare).
@@ -13,7 +13,7 @@ Obiective
 	Evaluarea performanțelor sistemului de control, în special în ceea ce privește precizia și stabilitatea prinderii și eliberării obiectelor de către gripper.
 	Analiza rezultatelor obținute și identificarea posibilelor îmbunătățiri ale sistemului, în vederea optimizării performanțelor și utilizabilității mâinii proteze.
 
- Specificații:
+##  Specificații:
  
 	 Funcții ale aplicației: 
 	a. Detectarea semnalelor EMG generate de mușchii umani și utilizarea acestora pentru controlul motorului servo și a gripperului.
@@ -27,7 +27,7 @@ Obiective
 
 	e. Integrarea unei interfețe utilizator-grafic (GUI) în LabVIEW pentru a facilita interacțiunea cu utilizatorul și controlul sistemului.
 
-Nivele de performanță: 
+## Nivele de performanță: 
  
 	a. Sistemul de control trebuie să ofere un răspuns rapid și precis în funcție de semnalele EMG detectate.
 
@@ -35,7 +35,7 @@ Nivele de performanță:
 
 	c. Regulatorul utilizat trebuie să asigure stabilitatea sistemului și să minimizeze erorile de poziționare.
 	
- Elemente și calitate: 
+## Elemente și calitate: 
 	
  	a. Utilizarea plăcii Elvis și a componentelor electronice adecvate pentru a asigura o funcționare fiabilă și precisă a sistemului. 
 	
@@ -43,7 +43,7 @@ Nivele de performanță:
 
 	c. Asigurarea unei construcții solide și robuste a gripperului pentru a face față prinderii și eliberării repetate a obiectelor.
 	
- Limitări: 
+## Limitări: 
 
 	a. Sistemul trebuie să fie compatibil cu limitele și specificațiile plăcii Elvis și ale componentelor utilizate. 
 
@@ -51,9 +51,9 @@ Nivele de performanță:
 	
  	c. Detectarea semnalelor EMG poate fi influențată de zgomotul electric ambiental sau de alte interferențe, astfel încât trebuie luate măsuri pentru a minimiza aceste efecte nedorite.
  
-Determinarea modelului matematic al sistemului
+## Determinarea modelului matematic al sistemului
  
-Analiza sistemului  
+### Analiza sistemului  
 
 	 Marimea controlată (output) în acest caz este poziția gripperului. Scopul este de a controla și monitoriza poziția acestuia în timpul prinderii și eliberării obiectelor.
  
@@ -64,17 +64,17 @@ Analiza sistemului
  
 <img width="257" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/e40d1ad2-9cb3-46dc-820d-00fc42f3d5b9">
 
-Relaxat
+### Relaxat
 
 <img width="258" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/ef8ec4f9-b6a9-4448-adb3-b6c75b81613b">
 
-Incordat
+### Incordat
 
-Semnal nefiltrat
+### Semnal nefiltrat
 
 <img width="485" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/92724895-578d-4360-8e8b-565adc1db60e">
  
-Semnal filtrat
+### Semnal filtrat
 
 <img width="485" alt="image" src="https://github.com/chiriacdaria/myoelectric/assets/99746700/d6f5d83b-caa5-48e2-92c3-3208ff7c4c4a">
 
@@ -175,7 +175,7 @@ Metode aplicate pentru rezolvarea problemei
 	Prin stabilirea timpului de stabilizare și suprareglajului dorite, putem calcula factorul de amortizare (zeta) și frecvența naturală (wn) necesare pentru a obține un răspuns reglat adecvat. Aceste parametri sunt utilizate pentru a construi funcția de transfer a regulatorului continuu (tf_H0) și a sistemului în buclă închisă (Hreg).
 
 	Metoda Guillemin-Truxal oferă, de asemenea, posibilitatea de a transforma regulatorul continuu într-un regulator discret utilizând aproximarea ZOH (Zero-Order Hold). Acest lucru este util dxeoarece ne dorim  implementarea regulatorului pe un sistem de control digital.
-Descrierea procedurilor 
+### Descrierea procedurilor 
 
 	Definirea funcției de transfer a procesului
 	
@@ -216,7 +216,7 @@ Calcule, tehnici, descrierea echipamentelor
 	Pentru a realiza aceste calcule și a implementa metoda Guillemin-Truxal, am utilizat mediul de programare MATLAB.
 
 
-Metodologia de proiectare
+## Metodologia de proiectare
 	
 Metodologia de proiectare în contextul metodei Guillemin-Truxal pentru proiectarea unui controler continuu a implicat următoarele etape:
 	
@@ -321,7 +321,7 @@ Verificarea funcționalității de bază
  	Implementarea și testarea sistemului de control: Am implementat aplicația de control în mediul LabVIEW, utilizând placa Elvis și protocolul QNet pentru comunicare cu gripperul. Am verificat funcționalitatea de bază a aplicației și am testat precizia, repeatabilitatea și performanța sistemului de control prin experimente practice. Am înregistrat date și am analizat rezultatele pentru a evalua performanța și stabilitatea sistemului.
 
 
-Concluzii:
+## Concluzii:
 
 	Aplicația de control implementată în LabVIEW, folosind placa Elvis și protocolul QNet, a permis controlul eficient și precis al gripperului.
  
