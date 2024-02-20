@@ -1,5 +1,5 @@
 
-## Scopul Proiectului 
+## Scopul Proiectului  :signal_strength:
  
 	Scopul proiectului este de a dezvolta un dispozitiv de antrenament myoelectric care să permită utilizatorului să controleze un servo motor cu ajutorul semnalelor electromiografice (EMG) generate de mușchii săi. 
  	Acest proiect se concentrează pe utilizarea tehnologiei EMG pentru a crea o interfață între sistemul muscular al utilizatorului și dispozitivul de antrenament.
